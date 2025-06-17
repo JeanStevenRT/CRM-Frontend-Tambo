@@ -11,7 +11,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import PendingAdmin from './pages/PendingAdmin'; 
 import InReviewAdmin from './pages/InReviewAdmin';
 import UserCreate  from './pages/UserCreate'; 
-import UsersList from './pages/UsersList';  
+import UsersList from './pages/UsersList'; 
+import AssignedTasksUser from './pages/AssignedTasksUser';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       }>
         <Route index element={<AssignedTasks />} />
         <Route path="create" element={<CreateTask />} />
+        <Route path="assigned-task-user" element={<AssignedTasksUser />} />
         <Route path="completed" element={<CompletedTasks />} />
         <Route path="pending-admin" element={<PendingAdmin />} />
         <Route path="in-review-admin" element={<InReviewAdmin />} />

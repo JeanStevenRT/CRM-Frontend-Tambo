@@ -12,7 +12,12 @@ export default function Sidebar() {
       <ul>
         <li className='russo-one-regular'><NavLink to="/">Tareas asignadas</NavLink></li>
         {user?.rol === 'admin' && (
-        <li><NavLink to="/create">Asignar tareas</NavLink></li>
+        <li><NavLink to="/create">crear tarea</NavLink></li>
+        
+        )}
+        {user?.rol === 'admin' && (
+        <li><NavLink to="/assigned-task-user">Asignar tarea a usuario</NavLink></li>
+        
         )}
         <li><NavLink to="/completed">Tareas completadas</NavLink></li>
         <li>Administrar Taras por Fechas</li>
