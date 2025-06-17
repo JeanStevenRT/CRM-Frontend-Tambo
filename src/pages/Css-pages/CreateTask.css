@@ -1,0 +1,24 @@
+.create-task-form{
+    padding: 2.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    
+}
+.create-task-form h2{
+    font-size: 1.5rem;
+    color: var(--color-white);
+
+}
+.create-task-form input{
+    width: 500px;
+}
+.create-task-form textarea{
+    width: 500px;
+    field-sizing: content;
+}
+.create-task-form select{
+    width: 350px;
+    field-sizing: content;
+}

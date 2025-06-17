@@ -1,0 +1,8 @@
+.Container-task .user-create-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.Container-task .user-create-form button{
+    padding: 1rem 2rem;
+}

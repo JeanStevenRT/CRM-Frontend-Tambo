@@ -1,0 +1,66 @@
+.Container-task{
+    padding: 2.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+}
+.Container-task h2{
+    color: var(--color-white);
+    
+    
+}
+.Card-Task-Undefined h3{
+    color: var(--tambo-secondary);
+}
+.Container-task .Card-Task{
+   width: 100%;
+}
+.Container-task .Card-Task h3{
+    font-size: 1.2rem;
+    color: var(--tambo-main);
+    padding-bottom: 1.5rem;
+    
+}
+.Container-task .Card-Task h3{
+    display: flex;
+    justify-content: space-between;
+}
+.Container-task .Card-Task h3 select{
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+}
+.Container-task .Card-Task .Task-Details{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 550px));
+    gap: 0.8rem;
+
+}
+.Container-task .Card-Task .Task-Details .Details{
+    background-color: var(--tambo-secondary);
+    padding: 3rem 2rem;
+    height: fit-content;
+    border-radius: 0.3rem;
+    
+}
+.Container-task .Card-Task .Task-Details .Details ul{
+    list-style: none;
+    line-height: 1.2em;
+}
+.Container-task .Card-Task .Task-Details .Details ul li{
+   
+    color: var(--tambo-main);
+    font-size: 0.9rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+
+}
+.Container-task .Card-Task .Task-Details .Details ul li span{
+    font-weight: 300;
+    font-size: 0.8rem;
+    overflow-wrap: break-word; 
+  word-break: break-word;
+}
+.Container-task .Card-Task .Task-Details .Details button{
+    float: right;
+}

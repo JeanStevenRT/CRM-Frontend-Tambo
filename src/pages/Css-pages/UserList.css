@@ -1,0 +1,50 @@
+.Container-task table{
+    background-color: var(--tambo-gray);
+}
+.Container-task table{
+    padding: 1.5rem 2rem;
+}
+.Container-task table thead tr th {
+    color: var(--tambo-secondary);
+}
+.Container-task table tbody tr td{
+    color: var(--color-white);
+    font-size: 0.8rem;
+}
+.hash-cell {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-table{
+    width: 100%;
+  border-collapse: collapse;          
+  font-family: 'Poppins', sans-serif;
+  min-width: 680px;   
+}
+.user-table thead {
+  background: #9f0d8d;               
+}
+.user-table tbody tr:hover {
+  background: #9f0d8d;
+}
+.user-table th, .user-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #f1f1f1;
+  font-family: Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  .user-table th,
+  .user-table td {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    
+  }
+}

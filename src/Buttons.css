@@ -1,0 +1,94 @@
+.primaryButton {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border: 2px solid var(--tambo-secondary);
+  cursor: pointer;
+  border-radius: 56px;
+  background-color: var(--tambo-secondary);
+  color: var(--gris-tambo);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 28px;
+  width: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.3s;
+}
+
+.primaryButton:hover {
+  background-color: var(--tambo-main);
+  border-color: var(--tambo-main);
+  color: #fff;
+}
+
+.secondaryButton {
+  padding: 1rem 1rem;
+  height: fit-content;
+  min-height: 55px;
+  border-radius: 56px;
+  background-color: var(--tambo-main);
+  color: var(--tambo-gray);
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  color: var(--color-white);
+  margin: 0.5rem 0;
+}
+
+.buttonVariant {
+  padding: 16px 70px;
+  height: fit-content;
+  border-radius: 56px;
+  background-color: #fff;
+  border: 2px solid var(--tambo-main);
+  color: var(--tambo-main);
+  font-size: 15px;
+  font-weight: 700;
+  transition: 0.3s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+
+.buttonVariant:focus-visible,
+.secondaryButton:focus-visible {
+  outline: none;
+}
+
+.buttonVariant:active:hover,
+button.secondaryButton:active:hover {
+  background-color: #23226b;
+}
+
+.secondaryButton:disabled {
+  background-color: #aeaeae;
+  color: #fff;
+  cursor: default;
+}
+
+.buttonVariant:hover {
+  transform: scale(1.05);
+  background-color: var(--tambo-main);
+  color: #fff;
+}
+
+.secondaryButton:not([disabled]):hover {
+  transform: scale(1.05);
+  background-color: var(--tambo-main);
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+    .secondaryButton{
+        font-size: 13px;
+        padding: 10px 40px;
+    }
+}

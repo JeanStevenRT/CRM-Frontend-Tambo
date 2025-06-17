@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  color: var(--tambo-gray);
+}
+
+body:not(:has(.panelContainer)){
+  background-color: var(--tambo-main);
+}
+
+html:has(.panelContainer){
+  overflow-y: hidden;
+}
+
+li{
+  font-family: "Poppins", sans-serif !important;
+  font-size: 0.8rem;
+}
+
+:root {
+  font-size: 20px;
+  --tambo-main: #c21195;
+  --tambo-secondary: #ffed01;
+  --tambo-gray: #383838;
+  --toastify-color-success: #c21195;
+  --verde-medio: #0A5C4E;
+ --color-white: #fff;
+}
+
+#root:has(.panelContainer) {
+  overflow: hidden;
+  height: 100vh;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--tambo-main);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 10px;
+  background-color: var(--tambo-main);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--tambo-secondary);
+}
+
+.russo-one-regular {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+input,textarea,select{
+  padding: 0.8rem 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  border-color: transparent;
+}
+
+input:focus,textarea:focus,select:focus{
+    border-color: var(--tambo-secondary);
+    outline: none;
+}
