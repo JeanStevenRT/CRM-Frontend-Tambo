@@ -66,12 +66,12 @@ export default function AssignedTasks() {
                         <option value="completado">Completado</option>
                     </select> </h3>
                 <ul>
-                  <li>Descripción: <span> {t.description || '—'}</span>  </li>
-                  <li>Tarea Creada el: <span>{t.createdAtLocal} </span>  </li>
+                  <li>Descripción : <span> {t.description || '—'}</span>  </li>
+                  <li>Tarea Creada el : <span>{t.createdAtLocal} </span>  </li>
                   
                   <li>{user.rol === 'admin' && t.assignedTo && (
                   <>
-                    Asignado a: <span>{t.assignedTo.nombres} {t.assignedTo.apellidos}</span> 
+                    Asignado a : <span>{t.assignedTo.nombres} {t.assignedTo.apellidos}</span> 
                   </>
                 )}</li>
                   

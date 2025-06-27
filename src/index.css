@@ -33,7 +33,8 @@ li{
   --tambo-gray: #383838;
   --toastify-color-success: #c21195;
   --verde-medio: #0A5C4E;
- --color-white: #fff;
+  --color-white: #fff;
+  --tambo-card:#da70d6;
 }
 
 #root:has(.panelContainer) {

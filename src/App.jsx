@@ -13,6 +13,8 @@ import InReviewAdmin from './pages/InReviewAdmin';
 import UserCreate  from './pages/UserCreate'; 
 import UsersList from './pages/UsersList'; 
 import AssignedTasksUser from './pages/AssignedTasksUser';
+import CalendarAdmin from './pages/CalendarAdmin';
+import TaskHistory from './pages/TaskHistory';
 
 export default function App() {
   return (
@@ -31,6 +33,8 @@ export default function App() {
         <Route path="in-review-admin" element={<InReviewAdmin />} />
         <Route path="user-create" element={<UserCreate />} />
         <Route path="users-list" element={<UsersList />} />
+        <Route path="calendar" element={<CalendarAdmin />} />
+          <Route path="calendar/task/:id" element={<TaskHistory />} />
       </Route>
     </Routes>
   );

@@ -18,7 +18,7 @@
 }
 .Container-task .Card-Task h3{
     font-size: 1.2rem;
-    color: var(--tambo-main);
+    color: var(--color-white);
     padding-bottom: 1.5rem;
     
 }
@@ -37,10 +37,17 @@
 
 }
 .Container-task .Card-Task .Task-Details .Details{
-    background-color: var(--tambo-secondary);
     padding: 3rem 2rem;
     height: fit-content;
     border-radius: 0.3rem;
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(218, 112, 214, 0.62);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(218, 112, 214, 0.3);
     
 }
 .Container-task .Card-Task .Task-Details .Details ul{
@@ -49,7 +56,7 @@
 }
 .Container-task .Card-Task .Task-Details .Details ul li{
    
-    color: var(--tambo-main);
+    color: var(--tambo-secondary);
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
     font-weight: 600;
@@ -60,6 +67,7 @@
     font-size: 0.8rem;
     overflow-wrap: break-word; 
   word-break: break-word;
+  color: var(--color-white);
 }
 .Container-task .Card-Task .Task-Details .Details button{
     float: right;

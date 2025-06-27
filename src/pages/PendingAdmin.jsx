@@ -55,9 +55,9 @@ export default function PendingAdmin() {
                     </select>
                 </h3>
                 <ul>
-                    <li>Descripción: <span>{t.description || '—'}</span></li>
-                    <li>Tarea Creada en:<span>{t.createdAtLocal}</span></li>
-                    <li>Asignado a: <span>{t.assignedTo ?  `${t.assignedTo.username} (${t.assignedTo.nombres} ${t.assignedTo.apellidos})` : '—'}</span></li>
+                    <li>Descripción : <span>{t.description || '—'}</span></li>
+                    <li>Tarea Creada en : <span>{t.createdAtLocal}</span></li>
+                    <li>Asignado a : <span>{t.assignedTo ?  `${t.assignedTo.username} (${t.assignedTo.nombres} ${t.assignedTo.apellidos})` : '—'}</span></li>
                 </ul>
                 {Object.keys(draft).length > 0 && (
                 <button className='secondaryButton' onClick={handleUpdate}>Actualizar estado</button> )}

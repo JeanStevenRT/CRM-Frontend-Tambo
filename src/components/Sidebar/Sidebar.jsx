@@ -16,7 +16,10 @@ export default function Sidebar() {
         
         )}
         {user?.rol === 'admin' && (
+        <>
         <li><NavLink to="/assigned-task-user">Asignar tarea a usuario</NavLink></li>
+        <li><NavLink to="/calendar">administrar por calendario</NavLink></li>
+         </>
         
         )}
         <li><NavLink to="/completed">Tareas completadas</NavLink></li>
@@ -24,7 +27,7 @@ export default function Sidebar() {
         <li><NavLink to="/pending-admin">Administrar Tareas Pendientes</NavLink></li>
         <li><NavLink to="/in-review-admin">Administrar Tareas En Revisión</NavLink></li>
          {user.rol === 'admin' && (
-          <>
+         <>
             <li><NavLink to="/user-create">Crear usuario</NavLink></li>
             <li><NavLink to="/users-list">Lista de usuarios</NavLink></li>
           </>
