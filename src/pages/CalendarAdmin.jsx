@@ -2,6 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import api  from '../services/api';
 import { AuthContext } from '../context/AuthContext';
 import { Link } from 'react-router-dom';
+import { CiCalendarDate } from "react-icons/ci";
+import { CiBookmarkCheck } from "react-icons/ci";
+
 
 const MONTHS = [
   'enero','febrero','marzo','abril','mayo','junio',
@@ -33,17 +36,20 @@ export default function CalendarAdmin() {
       <h2 className='russo-one-regular'>Ver tareas en formato calendario</h2>
 
       {/* GRID 12 MESES */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,120px)',gap:24}}>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(4,230px)',gap:24}} className='Container-months'>
         {MONTHS.map((name,i) => (
           <div
+           
             key={i}
             onClick={() => setSel({ ...sel, m: i })}
             style={{
               cursor:'pointer',
-              border: sel.m===i ? '2px solid blue' : '1px solid gray',
+              border: sel.m===i ? '3.5px solid var(--tambo-secondary)' : '2px solid var(--tambo-main)',
               padding:6, textAlign:'center'
             }}
+            className='Months'
           >
+            <CiCalendarDate />
             {name}
           </div>
         ))}
@@ -51,25 +57,35 @@ export default function CalendarAdmin() {
 
       {/* LISTA DEL MES */}
       {sel.m !== null && (
-        <section style={{marginTop:32}}>
-          <h3 style={{textTransform:'capitalize'}}>
+        <section style={{marginTop:32}} className='Container-months' >
+          <h3 style={{textTransform:'uppercase'}} className='russo-one-regular'>
             {MONTHS[sel.m]} {sel.y}
           </h3>
-
+          <hr />
           {tasks.length === 0
             ? <p>No hay tareas este mes.</p>
             : <ul>
                 {tasks.map(t => (
                   <li key={t._id}>
-                    <Link to={`/calendar/task/${t._id}`}>{t.title}</Link> — {t.status}
-                    <br/>
-                    {t.description && <> {t.description}<br/></>}
-                    Creada: {fmt(t.createdAt)}
-                    {user.rol === 'admin' && t.assignedTo &&
-                      <> — asignada a {t.assignedTo.username}</>}
+                    <CiBookmarkCheck />
+                    <div className='Content_info'>
+                       <Link to={`/calendar/task/${t._id}`}>{t.title}</Link> — {t.status}
+                      <br/>
+                      {t.description && <> {t.description}<br/></>}
+                     
+                      Creada : {fmt(t.createdAt)} —
+                       <span>
+                      {user.rol === 'admin' && t.assignedTo &&
+                        <> asignada a {t.assignedTo.nombres} {t.assignedTo.apellidos} ({t.assignedTo.username})</>}
+                      </span>
+                      
+                    </div>
+                   
+                    
                   </li>
-                ))}
-              </ul>}
+                  
+                ))}<hr />
+              </ul> }
         </section>
       )}
     </div>

@@ -34,8 +34,8 @@ export default function TaskHistory() {
   const { tarea, logs } = data;
 
   return (
-    <div>
-      <h2>{tarea.title}</h2>
+    <div className='Container-task'>
+      <h2 className='russo-one-regular'>{tarea.title}</h2>
       {user.rol==='admin' && (
         <button onClick={handleDelete}>borrar task asignada</button>
       )}

@@ -72,3 +72,63 @@
 .Container-task .Card-Task .Task-Details .Details button{
     float: right;
 }
+.Container-months{
+    place-content: center;
+    padding: 2rem 0;
+     padding: 3rem 2rem;
+    height: fit-content;
+    border-radius: 0.3rem;
+    /* From https://css.glass */
+    /* From https://css.glass */
+    background: rgba(218, 112, 214, 0.62);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(218, 112, 214, 0.3);
+}
+.Container-months h3{
+    color: var(--color-white);
+
+}
+.Container-months .Months{
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    border-radius: 0.5rem;
+    color: var(--tambo-card);
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    align-items: center;
+    
+}
+.Container-months hr{
+    border: 1px solid white;
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+}
+.Container-months p{
+    color: var(--tambo-secondary);
+}
+.Container-months ul li{
+    color: var(--color-white);
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
+}
+.Container-months ul li svg{
+    width: 2rem !important;
+    height: 1.5rem !important;
+}
+.Container-months ul li .Content_info{
+    line-height: 2em;
+}
+.Container-months ul li .Content_info a{
+  color: var(--tambo-secondary);
+}
+.Container-months ul li .Content_info span{
+    color: #ffc29d;
+}

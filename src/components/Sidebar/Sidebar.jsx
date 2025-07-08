@@ -23,7 +23,6 @@ export default function Sidebar() {
         
         )}
         <li><NavLink to="/completed">Tareas completadas</NavLink></li>
-        <li>Administrar Taras por Fechas</li>
         <li><NavLink to="/pending-admin">Administrar Tareas Pendientes</NavLink></li>
         <li><NavLink to="/in-review-admin">Administrar Tareas En Revisión</NavLink></li>
          {user.rol === 'admin' && (
