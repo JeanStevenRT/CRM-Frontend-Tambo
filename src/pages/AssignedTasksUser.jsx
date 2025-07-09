@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
+import { FcCheckmark } from "react-icons/fc";
 
 export default function AssignTask() {
   const [templates, setTemplates]   = useState([]);
@@ -23,7 +24,7 @@ export default function AssignTask() {
   const handleSubmit = e => {
     e.preventDefault();
     api.post('/tasks/assign', form)
-       .then(() => { setMsg('✅ Tarea asignada'); setForm({ ...form, status:'pendiente' }); })
+       .then(() => { setMsg(<><FcCheckmark /> Tarea asignada</>); setForm({ ...form, status:'pendiente' }); })
        .catch(err => setMsg(err.response?.data?.mensaje || 'Error'));
   };
 

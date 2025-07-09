@@ -13,12 +13,17 @@
   align-items: center;
   justify-content: space-around;
   transition: 0.3s;
+  padding: 0.3rem;
+}
+.purpple{
+  color: var(--tambo-card);
+  padding: 0.5rem 0;
 }
 
 .primaryButton:hover {
-  background-color: var(--tambo-main);
+  background-color: var(--color-white);
   border-color: var(--tambo-main);
-  color: #fff;
+  color: var(--tambo-card);
 }
 
 .secondaryButton {
@@ -39,6 +44,10 @@
   gap: 9px;
   color: var(--color-white);
   margin: 0.5rem 0;
+}
+.secondaryButton svg{
+  width: 2rem;
+  height: 2rem;
 }
 
 .buttonVariant {
@@ -92,3 +101,13 @@ button.secondaryButton:active:hover {
         padding: 10px 40px;
     }
 }
+
+.dangerButton{
+  background:#d40000;
+  color:white;
+  border:none;
+  padding:4px 10px;
+  cursor:pointer;
+  border-radius:4px;
+}
+.dangerButton:hover{background:#a80000}

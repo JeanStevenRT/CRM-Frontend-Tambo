@@ -10,6 +10,9 @@
     
     
 }
+.Container-task p{
+    color: var(--color-white);    
+}
 .Card-Task-Undefined h3{
     color: var(--tambo-secondary);
 }
@@ -91,6 +94,10 @@
     color: var(--color-white);
 
 }
+.Container-months p{
+    color: var(--color-white);
+
+}
 .Container-months .Months{
     background-color: var(--color-white);
     border-color: var(--color-white);
@@ -108,9 +115,7 @@
     width: 100%;
     margin: 1rem 0;
 }
-.Container-months p{
-    color: var(--tambo-secondary);
-}
+
 .Container-months ul li{
     color: var(--color-white);
     display: flex;

@@ -14,11 +14,21 @@
     
 }
 .sidebar ul li{
-    color: var(--tambo-gray);
+    
     font-size: 0.9rem;
     list-style: none;
     line-height: 1.3em;
     margin-bottom: 0.8rem;
+}
+.sidebar ul li a{
+    color: var(--tambo-gray);
+}
+.sidebar ul li a:hover{
+    color:var(--tambo-card);
+}
+.sidebar a.active {   
+color:var(--tambo-card);  
+  font-weight: 700;
 }
 .sidebar ul{
     

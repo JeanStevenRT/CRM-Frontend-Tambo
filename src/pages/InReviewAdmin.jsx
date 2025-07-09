@@ -61,7 +61,7 @@ export default function InReviewAdmin() {
                   : '—'}</span></li>
                 </ul>
                  {Object.keys(draft).length > 0 && (
-                 <button onClick={handleUpdate}>Actualizar estado</button>
+                 <button onClick={handleUpdate} className='secondaryButton'>Actualizar estado</button>
                     )}
                 
               </div>
