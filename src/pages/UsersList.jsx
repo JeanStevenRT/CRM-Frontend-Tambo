@@ -9,7 +9,7 @@ export default function UsersList() {
   const [users, setUsers] = useState([]);
   const [msg,   setMsg]   = useState(null);
 
-  /* ──────────────── cargar lista ──────────────── */
+  /* Carga lista de usuarios*/
   useEffect(() => {
     if (user.rol === 'admin') {
       api.get('/auth/users/all')
@@ -18,7 +18,7 @@ export default function UsersList() {
     }
   }, [user]);
 
-  /* ──────────────── borrar usuario ──────────────── */
+  /* borra usuario*/
   const handleDelete = id => {
     if (!window.confirm('¿Eliminar usuario definitivamente?')) return;
     api.delete(`/auth/users/${id}`)

@@ -1,5 +1,4 @@
 .sidebar{
-    width: 20%;
     height: 100%;
     background-color: var(--tambo-secondary);
     padding: 2rem 3rem;
@@ -27,7 +26,7 @@
     color:var(--tambo-card);
 }
 .sidebar a.active {   
-color:var(--tambo-card);  
+  color:var(--tambo-card);  
   font-weight: 700;
 }
 .sidebar ul{
@@ -35,4 +34,141 @@ color:var(--tambo-card);
 }
 .sidebar ul li a{
     text-decoration: none;
+}
+
+.dashboard{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    position: relative;
+}
+
+.menuBtn{
+  display: none;
+  position: fixed;
+  top: 2rem;
+  background-color: transparent;
+  right: 1rem;
+  z-index: 1;
+  border: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.menuBtn svg{
+  width: 2rem;
+  height: 2rem;
+  color: var(--tambo-main);
+
+}
+
+
+.overlay{
+  display: none;
+}
+
+@media (max-width: 900px){
+  .dashboard{
+    grid-template-columns: 1fr; 
+  }
+
+  .menuBtn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay{
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease;
+    z-index:2;
+  }
+
+  .overlay.show{
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+header{
+  
+  background-color: var(--tambo-secondary);
+ 
+  min-height: 100vh;
+}
+@media (max-width:900px) {
+    header{
+        width: 100%;
+        min-height: auto;
+        margin: auto;
+        background-color: var(--tambo-secondary);
+        
+    }
+}
+
+/* Header del sidebar */
+.sidebarHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 2rem 3rem 0 3rem;
+}
+.sidebarHeader h2{
+  color: var(--tambo-main);
+}
+@media(max-width:900PX){
+ .sidebarHeader{
+    padding-bottom: 2rem
+ }
+ .sidebarHeader h2{
+    font-size: 3rem;
+    
+ }
+}
+
+/* X: oculto en desktop */
+.closeBtn{
+  display: none;
+  border: 0;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 9999;
+  justify-content: end;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+
+@media (max-width: 900px){
+  .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1100;
+    transform: translateX(-105%);
+    transition: transform .25s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  }
+
+  .sidebar.open{
+    transform: translateX(0);
+  }
+  .closeBtn{
+    display: block;
+  }
+
+  .closeBtn svg{
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--tambo-main);
+  }
 }

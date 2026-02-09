@@ -8,7 +8,6 @@
   font-weight: 700;
   font-size: 19px;
   line-height: 28px;
-  width: 260px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -27,7 +26,7 @@
 }
 
 .secondaryButton {
-  padding: 1rem 1rem;
+  padding: 0.5rem 0.8rem;
   height: fit-content;
   min-height: 55px;
   border-radius: 56px;
@@ -46,8 +45,8 @@
   margin: 0.5rem 0;
 }
 .secondaryButton svg{
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .buttonVariant {

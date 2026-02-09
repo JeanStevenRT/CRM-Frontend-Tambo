@@ -5,6 +5,7 @@
 }
 .login-form h1{
     color: #fff;
+    font-size: 1.5rem;
 }
 
 .Container-login{
@@ -14,7 +15,25 @@
     height: 100vh;
     gap: 2rem;
 }
+@media (max-width:1000px) {
+    .Container-login{
+        flex-direction: column;
+        gap: 0;
+    }
+}
 .Container-login img{
     width: 20rem;
     height:20rem;
+}
+@media (max-width:1000px) {
+    .Container-login img{
+    width: 15rem;
+    height:15rem;
+    }
+}
+@media (max-width:700px) {
+    .Container-login img{
+    width: 10rem;
+    height:10rem;
+    }
 }

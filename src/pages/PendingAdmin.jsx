@@ -6,8 +6,7 @@ import './Css-pages/AssignedTasks.css'
 export default function PendingAdmin() {
   const { user } = useContext(AuthContext);
   const [tasks, setTasks] = useState([]);
-  const [draft, setDraft] = useState({});  // { taskId: nuevoStatus }
-
+  const [draft, setDraft] = useState({});  
   // cargar TODAS pendientes (sin filtro de fecha)
   useEffect(() => {
     api.get('/tasks/pending')
@@ -45,15 +44,18 @@ export default function PendingAdmin() {
           <div className='Task-Details'>
             {tasks.map(t => (
               <div className='Details' key={t._id}>
-                <h3>{t.title}
-                    <select
-                        value={draft[t._id] ?? t.status}
-                        onChange={e => handleSelect(t._id, e.target.value)}>
+                <div className='description'>
+                  <h3>{t.title}</h3>
+                  <select
+                      value={draft[t._id] ?? t.status}
+                      onChange={e => handleSelect(t._id, e.target.value)}>
                         <option value="pendiente">Pendiente</option>
                         <option value="en_revision">En revisión</option>
                         <option value="completado">Completado</option>
-                    </select>
-                </h3>
+                  </select>
+                </div>
+                
+
                 <ul>
                     <li>Descripción : <span>{t.description || '—'}</span></li>
                     <li>Tarea Creada en : <span>{t.createdAtLocal}</span></li>

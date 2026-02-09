@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import api from '../services/api';
-import { FcCheckmark } from "react-icons/fc";
+import { FaCheck } from "react-icons/fa6";
 
 export default function AssignTask() {
   const [templates, setTemplates]   = useState([]);
@@ -12,7 +12,7 @@ export default function AssignTask() {
   });
   const [msg, setMsg] = useState(null);
 
-  /* cargar plantillas y trabajadores */
+
   useEffect(() => {
     api.get('/templates').then(r => setTemplates(r.data));
     api.get('/auth/users?rol=trabajador').then(r => setWorkers(r.data));
@@ -24,7 +24,7 @@ export default function AssignTask() {
   const handleSubmit = e => {
     e.preventDefault();
     api.post('/tasks/assign', form)
-       .then(() => { setMsg(<><FcCheckmark /> Tarea asignada</>); setForm({ ...form, status:'pendiente' }); })
+       .then(() => { setMsg(<p>Tarea asignada</p>); setForm({ ...form, status:'pendiente' }); })
        .catch(err => setMsg(err.response?.data?.mensaje || 'Error'));
   };
 
@@ -33,21 +33,20 @@ export default function AssignTask() {
       <form onSubmit={handleSubmit} className='user-create-form'>
         <h2 className='russo-one-regular'>Asignar tarea</h2>
 
-        {/* plantilla */}
+        
         <label>Seleccionar tarea</label>
         <select name="templateId" value={form.templateId} onChange={handleChange} required>
           <option value="">-- Elegir tarea --</option>
           {templates.map(t => <option key={t._id} value={t._id}>{t.title}</option>)}
         </select>
 
-        {/* trabajador */}
         <label>Seleccionar usuario</label>
         <select name="assignedTo" value={form.assignedTo} onChange={handleChange} required>
           <option value="">-- Elegir trabajador --</option>
           {workers.map(w => <option key={w._id} value={w._id}>{w.username}</option>)}
         </select>
 
-        {/* estado */}
+      
         <label>Estado de tarea</label>
         <select name="status" value={form.status} onChange={handleChange}>
           <option value="pendiente">Pendiente</option>
@@ -56,7 +55,7 @@ export default function AssignTask() {
         </select>
 
         <button className='primaryButton'type="submit">Guardar</button>
-        {msg && <p>{msg}</p>}
+        {msg && <div className='Correct-box'><FaCheck /> {msg}</div>}
       </form>
     </div>
     

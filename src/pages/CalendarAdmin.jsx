@@ -36,7 +36,7 @@ export default function CalendarAdmin() {
       <h2 className='russo-one-regular'>Ver tareas en formato calendario</h2>
 
       {/* GRID 12 MESES */}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(4,230px)',gap:24}} className='Container-months'>
+      <div style={{display:'grid',gap:24}} className='Container-months'>
         {MONTHS.map((name,i) => (
           <div
            

@@ -6,7 +6,7 @@ import './Css-pages/AssignedTasks.css'
 export default function InReviewAdmin() {
   const { user } = useContext(AuthContext);
   const [tasks, setTasks] = useState([]);
-  const [draft, setDraft] = useState({}); // { id: nuevoStatus }
+  const [draft, setDraft] = useState({}); 
 
   // cargar todas en revisión
   useEffect(() => {

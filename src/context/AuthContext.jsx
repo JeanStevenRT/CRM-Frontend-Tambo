@@ -25,7 +25,7 @@ export function AuthProvider({ children }) {
     const res = await api.post('/auth/login', { username, password });
     localStorage.setItem('token', res.data.token);
     setUser(res.data);
-    navigate('/');    // redirige al dashboard
+    navigate('/');  
   };
 
   const logout = () => {
