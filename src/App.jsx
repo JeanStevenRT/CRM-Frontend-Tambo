@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import {Navigate, Routes, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import './Buttons.css'
 import './index.css'
@@ -20,6 +20,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="*" element={<Navigate to="/login" replace />} />
       <Route path="/" element={
         <ProtectedRoute>
           <DashboardLayout />
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="calendar" element={<CalendarAdmin />} />
           <Route path="calendar/task/:id" element={<TaskHistory />} />
       </Route>
+      
     </Routes>
   );
 }

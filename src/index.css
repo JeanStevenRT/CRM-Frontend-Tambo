@@ -77,7 +77,12 @@ select{
   height: 2rem;
   font-size: 0.8rem;
   width: 5.5rem;
-  margin: auto;
+  
+}
+@media (max-width:900px) {
+  select{
+    margin: auto;
+  }
 }
 
 input:focus,textarea:focus,select:focus{

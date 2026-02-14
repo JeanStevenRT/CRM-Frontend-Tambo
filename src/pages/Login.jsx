@@ -36,8 +36,9 @@ export default function Login() {
         />
 
         <button  className='primaryButton' type="submit">Login</button>
+         <span className='account-demo'>Usuario demo: steven123, Contraseña: steven123</span>
         </form>
-      
+       
     </div>
   );
 }

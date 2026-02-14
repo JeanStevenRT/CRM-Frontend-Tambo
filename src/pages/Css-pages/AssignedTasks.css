@@ -87,6 +87,7 @@
 
 .Container-task .Card-Task .Task-Details .Details .description h3 {
     font-size: 1rem;
+    padding-bottom: 0.5rem;
 }
 @media (max-width:900px) {
     .Container-task .Card-Task .Task-Details .Details .description h3{
